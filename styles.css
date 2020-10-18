@@ -1,0 +1,60 @@
+button {
+  color: #FFF;
+  background-color: black;
+  font-family: Agency FB;
+  font-weight: italic;
+  width:20;
+  height:30;
+  font-size : px;
+}
+h1 {
+  color: white;
+  
+  font-weight: bold;
+  font-size : 30px;
+
+}
+h2 {
+  color: white;
+  
+  font-weight: bold;
+  font-size : 30px;
+}
+h6 {
+  color: white;
+  
+  font-weight: bold;
+  font-size : 20px;
+}
+h5 {
+  color: white;
+  
+  font-weight: bold;
+  font-size : 20px;
+}
+h7 {
+  color: white;
+  
+  font-weight: bold;
+  font-size : 20px;
+}
+
+h3 {
+  color: white;
+  
+  font-weight: bold;
+  font-size : 30px;
+}
+input {
+  color: black;
+  background-color:white;
+  font-weight: bold;
+  font-size : 15px;
+}
+#particles-js
+{
+	height: 100%;
+	background: #262626;
+	position: realtive;
+	top: 100vh;
+}

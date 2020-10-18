@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html ng-app="BookRentalApp" lang="en">
+
+<head>
+   
+	
+<title>Book Rental</title> 
+<div id="particles-js">
+
+<meta charset="utf-8" />
+    
+    <script>
+        document.write('<base href="' + document.location + '" />');
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <script src="app.js"></script>
+
+</head>
+
+<body>
+<center>
+<h2> BOOK RENTAL</h2>
+</center>
+<img src="C:\Users\Roro\Desktop\1.jpg" width="1400" height="300">
+
+
+
+<center>
+<h6>
+<div first-directive="">
+</div>
+</h6>
+
+<h5>
+<div ng-app="myApp" ng-controller="myCtrl">
+<div ng-repeat="coll in myCollections">
+{{coll}}
+</div>
+</div>
+</h5>
+</center>
+
+
+    <h1>Add Book</h1>
+    <div ng-controller="BookRentalAddController as book">
+	<input type="text" ng-model="book.name" placeholder="Book Name" />
+        <input type="text" ng-model="book.authorname" placeholder="Author Name" />
+        <input type="text" ng-model="book.year" placeholder="Year" />
+		<input type="text" ng-model="book.public1" placeholder="Publication" />
+		<left>
+		<br><br>
+        <button  ng-click="book.addItem();">Add Book</button>
+		</left>
+		</center>
+    </div>
+    <div  ng-controller="BookRentalShowController as showList">
+        <ol><br>
+            <li ng-repeat="item in showList.items">
+			
+                 <h7><B> {{ item.name }}</B> wrote by <b>{{ item.authorname}}</B>  on <B>{{item.year }}</B>  by the <B> {{ item.public1 }}</B> publication </h7>
+				 
+                <button ng-click="showList.removeItem($index);">Remove Item</button>
+            </li>
+        </ol>
+		<center>
+		
+		</center>
+		<h2>Search Book</h2>
+        <input type="text" ng-model="search" placeholder="Bookname search" />
+		<left>
+		<br><br>
+		<button>Search </button>
+		</left>
+        <ol>
+            <li ng-repeat="item in showList.items | filter : {name: search}">
+               <h7> <B> {{ item.name }}</B> wrote by <b>{{ item.authorname}}</B>  on <B>{{item.year }}</B>  by the <B> {{ item.public1 }}</B> publication</h7>  
+            </li>
+        </ol>
+		<center>
+		
+        </center>
+		<h3>Sort </h3>
+        <select name="sorting" ng-model="value">
+            <option value="name">Book Name</option>
+            <option value="authorname">Author Name</option>
+			<option value="year">Year</option>
+            <option value="public1">Publication</option>
+            
+        </select>
+		<left>
+		<br><br>
+        <button>Sort</button>
+		</left>
+        <ol>
+            <li ng-repeat="item in showList.items | orderBy : value">
+                <h7> <B> {{ item.name }}</B> wrote by <b>{{ item.authorname}}</B>  on <B>{{item.year }}</B>  by the <B> {{ item.public1 }}</B> publication</h7> 
+            </li>
+        </ol>
+        </div>
+</div>
+		<script type="text/javascript" src="particles.js"></script>
+		<script type="text/javascript" src="apps.js"></script>
+</body>
+
+</html>
